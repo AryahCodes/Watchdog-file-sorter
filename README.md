@@ -17,12 +17,15 @@
 `cd watchdog-file-sorter`
 `pip install -r requirements.txt`
 
-### **2️⃣ Create Required Folders**  
+### ONYL NEEDED IF YOU USE THE OLD VERSION, **2️⃣ Create Required Folders**  
 `Before running the script, you must manually create the destination folders, as they do not exist by default.`
-Mac/Linux:
+
+`Mac/Linux:
 mkdir -p ~/picsSorted ~/pdfSorted
 Windows (Command Prompt):
-mkdir %USERPROFILE%\picsSorted %USERPROFILE%\pdfSorted
+mkdir %USERPROFILE%\picsSorted %USERPROFILE%\pdfSorted`
+
+WITH NEW VERSION, YOU ONLY NEED TO DO STEP ONE
 
 ### **3️⃣ Run the Script** 
 python script.py
