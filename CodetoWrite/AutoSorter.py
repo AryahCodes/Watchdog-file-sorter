@@ -27,12 +27,16 @@ for folder in folders_Idrectory.values:
     os.makedirs(folder, exist_ok=True) #We use makedirs because this won't count for intermediate directories.
 
 #We are moving the file and logging it so we know what is happening.
-def moveThefile(event, string, fileName):
+def moveThefile(event, fileName):
     if isinstance(event, FileSystemEvent):
-        logging.info(f"I want to move the file {event.src_path} to the folder {string}")
+        
+        #create where file should go
+        destination = folders_Idrectory.get(fileName)
+
+        logging.info(f"I want to move the file {event.src_path} to the folder {destination}")
         try:
-            shutil.move(event.src_path, fileName)  
-            logging.info(f"Moved the file to folder {string}")
+            shutil.move(event.src_path, destination)  
+            logging.info(f"Moved the file to folder {destination}")
         except FileNotFoundError:
             logging.error("There is a FileNotFoundError.")
         except PermissionError:
@@ -54,15 +58,13 @@ class MyHandler(FileSystemEventHandler):
 
         #moves the files into different folders based on type
         if file_Ending in self.types_Of_Pics:
-            moveThefile(event, "picsSorted", "/Users/aryahb/picsSorted")
+            moveThefile(event, "picsSorted")
         elif file_Ending in self.pdfs:
-            moveThefile(event, "pdfSorted", "/Users/aryahb/pdfSorted")
+            moveThefile(event, "pdfSorted")
 
 #Checks to see if we run it from command line. 
 if __name__ == "__main__":
-    path = home_Idrectory  #The path I want. This is what we are watching.
-    logging.basicConfig(level=logging.INFO)
-    logger = logging.getLogger(__name__)
+    path = downloads_Idrectory  #The path I want. This is what we are watching.
     logging.info("File Sorter is starting...")
     event_handler = MyHandler() #class we need to write so that something can happen.
     observer = Observer()
