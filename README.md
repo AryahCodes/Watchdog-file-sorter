@@ -32,5 +32,7 @@ python script.py
 
 🚀 Next Steps
 📁 Move more file types (e.g., .txt, .mp3, .zip)
+Add more folders. 
 🛠️ Allow users to customize folder names in a config file
 📊 Generate a report on how many files were sorted
+Make it so no files are overwritten if the same name file is downloaded.
