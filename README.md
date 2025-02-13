@@ -30,3 +30,7 @@ WITH NEW VERSION, YOU ONLY NEED TO DO STEP ONE
 ### **3️⃣ Run the Script** 
 python script.py
 
+🚀 Next Steps
+📁 Move more file types (e.g., .txt, .mp3, .zip)
+🛠️ Allow users to customize folder names in a config file
+📊 Generate a report on how many files were sorted
