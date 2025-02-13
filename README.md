@@ -3,7 +3,7 @@
 🚀 A Python script that automatically sorts downloaded files into folders based on file type. Uses `watchdog` for real-time monitoring.  
 
 ## 📌 Features  
-- 📂 Moves images (`.png`, `.jpg`) to `picsSorted/`  
+- 📂 Moves images (`.png`, `.jpeg`, `.jpg`) to `picsSorted/`  
 - 📄 Moves PDFs (`.pdf`) to `pdfSorted/`  
 - 🎯 Uses `watchdog` to monitor directory changes  
 - 🛠️ Cross-platform support (Mac, Windows, Linux)  
