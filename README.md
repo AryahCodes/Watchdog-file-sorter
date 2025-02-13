@@ -36,3 +36,5 @@ Add more folders.
 🛠️ Allow users to customize folder names in a config file
 📊 Generate a report on how many files were sorted
 Make it so no files are overwritten if the same name file is downloaded.
+Integrate with task schedulers (e.g., cron for Linux/macOS, Task Scheduler for Windows) so that the script runs at specific intervals, not just continuously. This could reduce system load.
+Async IO or Threading: Learn how to implement asynchronous file operations using asyncio and aiofiles.
